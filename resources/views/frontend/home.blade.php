@@ -1,423 +1,709 @@
 @extends('frontend.layouts.app')
-@section('title', 'Home')
+@section('title', 'Home page')
+
 @section('page')
 
-<section class="home_banner_02">
-        <div class="home-carousel owl-theme owl-carousel">
-            <div class="slide-item hero-padding">
-                <div class="image-layer" data-background="{{ asset('frontend/images/bg/15.jpg') }}"></div>
-                <div class="auto-container main-container">
-                    <div class="row clearfix">
-                        <div class="col-xl-8 col-lg-12 col-md-12 content-column">
-                            <div class="content-box home-cont">
-                                <h1 class="home-carousel-title "><span class="main-title">Transforming</span> <span class="text-primary-color main-title">Spaces,
-                                        Enriching</span> <span class="text-obj1 main-title">Lives!</span></h1>
-                                <p class="home-carousel-text">We create places that inspire and genuinely enrich
-                                    lives by giving spaces Life </p>
-                                <div class="btn-box">
-                                    <a href="page-services-style-01.html" class="animate-btn-style3">GET IN TOUCH</a>
-                                </div>
-                            </div>
+
+    <!-- Main Sllider Start -->
+    <section class="main-slider" id="home">
+        <div class="main-slider__carousel owl-carousel owl-theme thm-owl__carousel" data-owl-options='{"loop": true, "items": 1, "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"], "margin": 0, "dots": true, "nav": true, "animateOut": "slideOutDown", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
+
+            <div class="item main-slider__slide-1">
+                <div class="main-slider__bg" style="background-image: url(user-assets/images/backgrounds/slider-1-1.jpg);">
+                </div><!-- /.slider-one__bg -->
+                <div class="container">
+                    <div class="main-slider__content">
+                        <h2 class="main-slider__title home-mob">Expert Landscape <br>Design Services </h2>
+                        <p class="main-slider__sub-title hero-pad"> Transforming Spaces with Innovative Landscape Designs</p>
+                        <div class="main-slider__btn-box">
+                            <a href="{{Route('frontend.contact')}}" class="main-slider__btn thm-btn">Get Free Quote</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Home Slider End -->
-    <!-- Service Section Area Start -->
-    <section style="padding: 125px 0px 0px 0px;" class="feature-work-section pdt-110 pdb-105 service-area">
-        <div class="section-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <h5 class="side-line-left text-primary-color mrb-10">Our Works</h5>
-                        <h2 class="mrb-45 our-works">Our Feature <span class="text-primary-color">Works</span></h2>
-                        <a href="page-services-style-01.html" class="animate-btn-style2 mrb-sm-60">All Services</a>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <div class="service-style1">
-                            <div class="service-inner">
-                                <i class="service-icon webextheme-icon-armchair"></i>
-                                <h4 class="service-title">Laboratory Solutions</h4>
-                                <div class="services-count"></div>
-                                <p class="service-description">We supply a range of products, including safety cabinets,
-                                    ventilated equipment, modular lab furniture, and more.</p>
-                                <div class="services-link">
-                                    <a class="text-btn" href="service-architecture.html">Read More</a>
-                                </div>
-                                <div class="service-inner-obj"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <div class="service-style1">
-                            <div class="service-inner">
-                                <i class="service-icon webextheme-icon-kitchen"></i>
-                                <h4 class="service-title">Datacenter Solutions</h4>
-                                <div class="services-count"></div>
-                                <p class="service-description">Explore tailored data center solutions with construction and
-                                    classification based on design and tier ratings.</p>
-                                <div class="services-link">
-                                    <a class="text-btn" href="service-architecture.html">Read More</a>
-                                </div>
-                                <div class="service-inner-obj"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <div class="service-style1">
-                            <div class="service-inner">
-                                <i class="service-icon webextheme-icon-architect"></i>
-                                <h4 class="service-title">Audio-Video Solutions</h4>
-                                <div class="services-count"></div>
-                                <p class="service-description">We promise exceptional entertainment, from Dolby Atmos setups
-                                    to home theater automation</p>
-                                <div class="services-link">
-                                    <a class="text-btn" href="service-architecture.html">Read More</a>
-                                </div>
-                                <div class="service-inner-obj"></div>
-                            </div>
+
+            <div class="item main-slider__slide-2">
+                <div class="main-slider__bg" style="background-image: url(user-assets/images/backgrounds/slider-1-2.jpg);">
+                </div><!-- /.slider-one__bg -->
+                <div class="container">
+                    <div class="main-slider__content">
+
+                        <h2 class="main-slider__title home-mob">Crafting Your
+                            <br>Vision</h2>
+                        <p class="main-slider__sub-title hero-pad">Architectural Excellence from Plans to Execution
+                        </p>
+                        <div class="main-slider__btn-box">
+                            <a href="{{Route('frontend.contact')}}" class="main-slider__btn thm-btn">Get Free Quote</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Service Section Area End -->
-    <!-- About Section Start -->
-    <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb about-padding"
-        data-background="{{ asset('frontend/images/bg/abs-bg3.png') }}" data-overlay-light="4">
-        <div class="container">
-            <div class="row about-flex">
-                <div class="col-md-12 col-lg-8 col-xl-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <div class="about-image-box-style1 about-side-line mrr-60 mrr-lg-0">
-                        <figure class="about-image1 js-tilt d-none d-md-block d-lg-block d-xl-block">
-                            <img class="img-full" src="{{ asset('frontend/images/about/about-sm1.jpg') }}" alt="" />
-                        </figure>
-                        <figure class="about-image2">
-                            <img class="img-full" src="{{ asset('frontend/images/about/about-lg1.jpg') }}" alt="" />
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <h5 class="side-line-left subtitle text-primary-color abt-comp">About Our Company</h5>
-                    <h2 class="mrb-45 mrb-lg-35 create-cont">Creating imaginative designs, turning spaces into
-                        art.</h2>
-                    <p class="about-text-block mrb-40 cont-1">Making Exceptional interiors The pursuit of
-                        excellence, inventiveness, and specialized solutions fuels our passion. Planning,
-                        design, and project management are all included in our comprehensive services. We create
-                        functional works of art in all kinds of settings, from hotels to offices, fusing
-                        creativity with utility.</p>
 
-                    <div class="row no-gutters">
-                        <div class="col-xl-12 col-lg-7 col-md-6 col-sm-6 cons-2 about-gutter about-response">
-                            <div style="flex-direction: column" class="featured-icon-box mrb-15">
-                                <div class="featured-icon">
-                                    <i class="webexflaticon webextheme-icon-003-staircase"></i>
-                                </div>
-                                <div class="featured-content">
-                                    <h4 class="featured-title">Exclusive Design</h4>
-                                    <p class="featured-desc">Elevate spaces with exclusive design expertise,
-                                        creating extraordinary works of art.</p>
-                                </div>
-                            </div>
-                            <div style="flex-direction: column" class="featured-icon-box mrb-sm-40">
-                                <div class="featured-icon">
-                                    <i class="webexflaticon base-icon-158-employee-2"></i>
-                                </div>
-                                <div class="featured-content">
-                                    <h4 class="featured-title">Professional Team</h4>
-                                    <p class="featured-desc mrb-0">Trust our skilled team for vision-to-reality
-                                        excellence and innovation.</p>
-                                </div>
-                            </div>
+            <div class="item main-slider__slide-3">
+                <div class="main-slider__bg" style="background-image: url(user-assets/images/backgrounds/slider-1-3.jpg);">
+                </div><!-- /.slider-one__bg -->
+                <div class="container">
+                    <div class="main-slider__content">
+
+                        <h2 class="main-slider__title home-mob ">Shop Nature's <br>Finest</h2>
+                        <p class="main-slider__sub-title hero-pad">Bringing Nature to Your Doorstep - Online Plant Shop</p>
+                        <div class="main-slider__btn-box">
+                            <a href="{{Route('frontend.contact')}}" class="main-slider__btn thm-btn">Get Free Quote</a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
-    <section style="background: #b88e75;" class="why-choose-us-style2-section bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80 why-us">
-        <div class="section-content">
-            <div class="container">
-                <div style="align-items: center;" class="our-mission-row row mrb-110">
-                    <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms"
-                        style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                        <h5 class="text-primary-color mrb-10"></h5>
-                        <h2 class="text-white mrb-30 o-mission-heading mrb-sm-30">
-                            <span style="color: white;" class="text-primary-color">Our Mission<br> </span>
-                        </h2>
-                        <p class="text-white mrb-40">Our mission is to transform, inspire, and motivate people through the
-                            use
-                            of advanced fit-out solutions in venues. By providing personalized designs
-                            and flawless execution, we aim to be the pinnacle of quality and go above
-                            and beyond for our clients. We aspire to design spaces that have a lasting
-                            influence and improve how people live, work, and interact with their surroundings. We are
-                            incessantly in search of excellence</p>
-                    </div>
-                    <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp " data-wow-delay="100ms"
-                        data-wow-duration="800ms"
-                        style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
-                        <div class="twentytwenty-wrapper twentytwenty-horizontal">
-                            <div class="before-after-slider1 style2 twentytwenty-container" style="height: 397.5px;">
-                                <!-- The before image is first -->
-                                <img src="{{ asset('frontend/images/before-after/3.jpg')}}"
-                                    alt="img1" class="twentytwenty-before"
-                                    style="clip: rect(0px, 318px, 397.5px, 0px);">
-                                <!-- The after image is last -->
-                                <img src="{{ asset('frontend/images/before-after/4.jpg')}}"
-                                    alt="img1" class="twentytwenty-after"
-                                    style="clip: rect(0px, 636px, 397.5px, 318px);">
-                                <div class="twentytwenty-overlay">
-                                    <div class="twentytwenty-before-label" data-content="Before"></div>
-                                    <div class="twentytwenty-after-label" data-content="After"></div>
-                                </div>
-                                <div class="twentytwenty-handle" style="left: 318px;"><span
-                                        class="twentytwenty-left-arrow"></span><span
-                                        class="twentytwenty-right-arrow"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="align-items: center;" class="our-vision-row row mrb-110 vision-mt">
-                    <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp our-mission" data-wow-delay="100ms"
-                        data-wow-duration="800ms"
-                        style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
-                        <div class="twentytwenty-wrapper twentytwenty-horizontal">
-                            <div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container"
-                                style="height: 397.5px;">
-                                <!-- The before image is first -->
-                                <img src="{{ asset('frontend/images/before-after/3.jpg')}}"
-                                    alt="img1" class="twentytwenty-before"
-                                    style="clip: rect(0px, 318px, 397.5px, 0px);">
-                                <!-- The after image is last -->
-                                <img src="{{ asset('frontend/images/before-after/4.jpg')}}"
-                                    alt="img1" class="twentytwenty-after"
-                                    style="clip: rect(0px, 636px, 397.5px, 318px);">
-                                <div class="twentytwenty-overlay">
-                                    <div class="twentytwenty-before-label" data-content="Before"></div>
-                                    <div class="twentytwenty-after-label" data-content="After"></div>
-                                </div>
-                                <div class="twentytwenty-handle" style="left: 318px;"><span
-                                        class="twentytwenty-left-arrow"></span><span
-                                        class="twentytwenty-right-arrow"></span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms"
-                        style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                        <h5 class=" text-primary-color mrb-10"></h5>
-                        <h2 class="text-white o-mission-heading mrb-30 mrb-sm-30">
-                            <span style="color: white;" class="text-primary-color">Our Vision<br> </span>
-                        </h2>
-                        <p class="text-white mrb-40">To lead advancement in the field by redefining fit-out solutions with
-                            creativity and unmatched craftsmanship. We strive to establish new standards
-                            and design environments that astonish viewers and improve the quality of
-                            human interaction through our persistent dedication to innovation and
-                            client satisfaction.</p>
+    <!--Main Sllider Start -->
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section style="padding-bottom: 100px;"
-    class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80"
-    data-background="https://alyasmeenkw.com/user-assets/images/bg/16.jpg" data-overlay-light="98"
-    style="background-image: url(&quot;images/bg/16.jpg&quot;);">
 
-    <div class="section-content">
+    <section class="about-one padding-about">
         <div class="container">
             <div class="row">
-                <div class="col-md-12  col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0ms"
-                    data-wow-duration="800ms"
-                    style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                    <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10"></h5>
-                    <div class="col-xl-12 text-center col-lg-12 col-md-12">
-
-                        <h2 class="mrb-45">Our <span class="text-primary-color">Values</span></h2>
-
-                    </div>
-                    <p class="text-dark text-center mrb-45"> The heart of our business activities lies in its interior
-                        fit-out division, demonstrating our commitment to effective communication with both customers
-                        and colleagues</p>
-                    <div class="row justify-content-center text-center">
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="icon-box-style1 mrb-md-40">
-                                <div style="margin-bottom: 1px!important;" class="featured-icon">
-                                    <img src="https://alyasmeenkw.com/user-assets/images/service/excellence.svg"
-                                        alt="">
-                                </div>
-                                <div class="icon-box-content">
-                                    <h4 class="text-dark icon-box-title">Excellence </h4>
-                                    <p class="icon-box-desc">Committed to excellence from concept to execution, we
-                                        maintain the highest standards with meticulous attention.</p>
-                                </div>
+                <div class="col-xl-6">
+                    <div class="about-one__left">
+                        <div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms"
+                            data-wow-duration="2500ms">
+                            <div class="about-one__img">
+                                <img decoding="async"
+                                    src="{{ asset('user-assets/images/home_about_section/home_about_section (1).png')}}"
+                                    alt="about-one-img-1" title="about-one-img-1">
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="icon-box-style1 mrb-md-40">
-                                <div style="margin-bottom: 1px!important;" class="featured-icon">
-                                    <img src="https://alyasmeenkw.com/user-assets/images/service/innovation.svg"
-                                        alt="">
-                                </div>
-                                <div class="icon-box-content">
-                                    <h4 class="text-dark icon-box-title">Innovation </h4>
-                                    <p class="icon-box-desc">We relentlessly pursue innovation, pushing boundaries to
-                                        create uniquely inspiring spaces.</p>
-                                </div>
+                            <div class="about-one__img-two">
+                                <img decoding="async"
+                                    src="{{ asset('user-assets/images/home_about_section/home_about_section_(2).png')}}"
+                                    alt="about-one-img-2" title="about-one-img-2">
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="icon-box-style1">
-                                <div style="margin-bottom: 1px!important;" class="featured-icon">
-                                    <img src="https://alyasmeenkw.com/user-assets/images/service/customer-centric.svg"
-                                        alt="">
+                            <div class="about-one__experience">
+                                <div class="about-one__experience-shape-1">
+                                    <img decoding="async"
+                                        src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/about-one-experience-shape-1.png"
+                                        alt="about-one-experience-shape-1" title="about-one-experience-shape-1">
                                 </div>
-                                <div class="icon-box-content">
-                                    <h4 class=" text-dark icon-box-title">Customer-Centric</h4>
-                                    <p class="icon-box-desc">We attentively listen and collaborate, tailoring fit-out
-                                        solutions to meet your aspirations.Quickly productivate time strategic mirina
-                                        magna</p>
+                                <div class="about-one__experience-shape-2">
+                                    <img decoding="async"
+                                        src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/about-one-experience-shape-2.png"
+                                        alt="about-one-experience-shape-2" title="about-one-experience-shape-2">
                                 </div>
-                            </div>
-                        </div>
-                        &nbsp;
-                        <div style="margin-top: 30px" class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="icon-box-style1">
-                                <div style="margin-bottom: 1px!important;" class="featured-icon">
-                                    <img src="https://alyasmeenkw.com/user-assets/images/service/integrity.svg"
-                                        alt="">
+                                <div class="about-one__experience-year">
+                                    <h3 class="odometer" data-count="26">00</h3>
                                 </div>
-                                <div class="icon-box-content">
-                                    <h4 class="text-dark icon-box-title">Integrity </h4>
-                                    <p class="icon-box-desc">Our bedrock is trust and integrity, fostering enduring
-                                        relationships through ethical, transparent, and honest interactions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="margin-top: 30px" class="col-xl-3  col-lg-4 col-md-6">
-                            <div class="icon-box-style1">
-                                <div style="margin-bottom: 1px!important;" class="featured-icon">
-                                    <img src="https://alyasmeenkw.com/user-assets/images/service/passion.svg" alt="">
-                                </div>
-                                <div class="icon-box-content">
-                                    <h4 class="text-dark icon-box-title">Passion </h4>
-                                    <p class="icon-box-desc">Driven by our passion, we tackle each project with zeal
-                                        and commitment, crafting exceptional spaces that enhance lives.</p>
+                                <div class="about-one__experience-text">
+                                    <p class="">Years of <br> experience</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="about-one__right">
+                        <div class="section-title text-left">
+                            <div class="section-title__icon">
+                                <img decoding="async"
+                                    src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/section-title-icon.png"
+                                    alt="section-title-icon" title="section-title-icon">
+                            </div>
+                            <span class="section-title__tagline">Welcome to Grassland</span>
+                            <h2 class="section-title__title">Innovative Designs, Nature's Masterpiece Creators</h2>
+                        </div>
+                        <p class="about-one__text-2">Grassland Enterprises, your trusted partner in transforming spaces through cutting-edge
+                            landscape designs and architectural excellence. From concept to execution, we bring nature to
+                            your doorstep with our online plant shop.
+                            </p>
+                        <ul class="about-one__points-1 list-unstyled ml-0">
+                            <li>
+                                <div class="icon">
+                                    <span aria-hidden="true" class="  icon-house"></span>
+                                </div>
+                                <div class="text">
+                                    <p class="">Creative <br> Expertise</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span aria-hidden="true" class="   icon-building"></span>
+                                </div>
+                                <div class="text">
+                                    <p class=" ">Comprehensive <br> services</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="about-one__btn-box padding-btn">
+                            <a class="about-one__btn thm-btn" href="{{ route('frontend.about') }}">Discover
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About One End-->
+
+    <!--Services Three Start-->
+    <section class="services-three">
+        <div class="services-three__bg"
+            style="background-image: url(user-assets/images/backgrounds/services-three-bg.png);"></div>
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="section-title__icon">
+                    <img src="{{ asset('user-assets/images/icon/section-title-icon.png') }}" alt="">
+                </div>
+                <span class="section-title__tagline">our seervices list</span>
+                <h2 class="section-title__title">Services we’re providing to
+                    <br> our customers
+                </h2>
+            </div>
+            <div class="row">
+                <!--Services Three Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="services-three__single">
+                        <div class="services-three__img-box">
+                            <div class="services-three__img">
+                                <img src="{{ asset('user-assets/images/home_service_section/home_service_section_(1).png') }}" alt="">
+                            </div>
+                            <div class="services-three__icon">
+                                <span class="icon-gardening"></span>
+                            </div>
+                        </div>
+                        <div class="services-three__content">
+                            <h3 class="services-three__title"><a href="spring-cleaning.html">Landscape Design</a>
+                            </h3>
+                            <p class="services-three__text">Innovative designs that harmonize nature for stunning outdoor transformations.
+                            </p>
+                            <div class="services-three__arrow-box">
+                                <a href="{{Route('frontend.services')}}" class="services-three__arrow"><span
+                                        class="icon-right-arrow-1"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Services Three Single End-->
+                <!--Services Three Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="services-three__single">
+                        <div class="services-three__img-box">
+                            <div class="services-three__img">
+                                <img src="{{ asset('user-assets/images/home_service_section/home_service_section_(2).png') }}" alt="">
+                            </div>
+                            <div class="services-three__icon">
+                                <span class="icon-farming-and-gardening"></span>
+                            </div>
+                        </div>
+                        <div class="services-three__content">
+                            <h3 class="services-three__title"><a href="hard-scaping.html">Architecture Services</a>
+                            </h3>
+                            <p class="services-three__text">Visionary designs, precise execution, elevating spaces with architectural excellence.
+                            </p>
+                            <div class="services-three__arrow-box">
+                                <a href="{{Route('frontend.services')}}" class="services-three__arrow"><span
+                                        class="icon-right-arrow-1"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Services Three Single End-->
+                <!--Services Three Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="services-three__single">
+                        <div class="services-three__img-box">
+                            <div class="services-three__img">
+                                <img src="{{ asset('user-assets/images/home_service_section/home_service_section_(3).png') }}" alt="">
+                            </div>
+                            <div class="services-three__icon">
+                                <span class="icon-gardener-1"></span>
+                            </div>
+                        </div>
+                        <div class="services-three__content">
+                            <h3 class="services-three__title"><a href="garden-care.html">Garden Landscape Services</a>
+                            </h3>
+                            <p class="services-three__text"> Crafting vibrant and sustainable garden landscapes for enchanting outdoor
+                                experiences.
+                                </p>
+                            <div class="services-three__arrow-box">
+                                <a href="{{Route('frontend.services')}}" class="services-three__arrow"><span
+                                        class="icon-right-arrow-1"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Services Three Single End-->
+                <!--Services Three Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="services-three__single margin-services">
+                        <div class="services-three__img-box">
+                            <div class="services-three__img">
+                                <img src="{{ asset('user-assets/images/home_service_section/home_service_section_(4).png') }}" alt="">
+                            </div>
+                            <div class="services-three__icon">
+                                <span class="icon-lawn-mower-1"></span>
+                            </div>
+                        </div>
+                        <div class="services-three__content">
+                            <h3 class="services-three__title"><a href="lawn-fertilization.html">Online Plant Shop</a>
+                            </h3>
+                            <p class="services-three__text">Conveniently bring nature home with a diverse range of plants</p>
+                            <div class="services-three__arrow-box">
+                                <a href="{{Route('frontend.services')}}" class="services-three__arrow"><span
+                                        class="icon-right-arrow-1"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Services Three Single End-->
+            </div>
+        </div>
+    </section>
+    <!--Services Three End-->
+    <!--Project One Start-->
+    <section class="project-one sec-mt">
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="section-title__icon">
+                    <img src="{{ asset('user-assets/images/icon/section-title-icon.png') }}" alt="">
+                </div>
+                <span class="section-title__tagline">our work showcase</span>
+                <h2 class="section-title__title">Enjoy our incredible recently <br> completed projects</h2>
+            </div>
+            <div class="project-one__carousel thm-owl__carousel owl-theme owl-carousel"
+                data-owl-options='{
+                "items": 3,
+                "margin": 30,
+                "smartSpeed": 700,
+                "loop":true,
+                "autoplay": true,
+                "nav":false,
+                "dots":false,
+                "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                "responsive":{
+                    "0":{
+                        "items":1
+                    },
+                    "768":{
+                        "items":2
+                    },
+                    "992":{
+                        "items": 3
+                    },
+                    "1200":{
+                        "items":3
+                    }
+                }
+            }'>
+                <!--Project One Single Start-->
+
+                @foreach ($projects as $project)
+                <div class="item">
+                    <div class="project-one__single">
+                        <div class="project-one__img">
+                            <img src="{{ url('projectt/preview/' . $project->preview_img) }}" alt="">
+                            <a href="{{ asset('user-assets/images/project/project-1-1.jpg') }}"
+                                class="img-popup project-one__icon">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <div class="project-one__content">
+                                <p class="project-one__sub-title">{{ $project->title }}</p>
+                                <h4 class="project-one__title"><a href="project-details.html">{{ $project->hyperlinks }}{{ $project->title }}</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                <!--Project One Single End-->
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!--Project One End-->
+
+
+    <section class="process-one">
+        <div class="process-one__shape-1"
+            style="background-image: url(https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/process-one-shape-1.png);">
+        </div>
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="section-title__icon">
+                    <img decoding="async"
+                        src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/section-title-icon.png"
+                        alt="section-title-icon" title="section-title-icon">
+                </div>
+                <span class="section-title__tagline">our work process </span>
+                <h2 class="section-title__title">See our 4 easy steps how <br> we works</h2>
+            </div>
+            <div class="process-one__top">
+                <div class="process-one__shape-2">
+                    <img decoding="async"
+                        src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/process-one-shape-2.png"
+                        alt="process-one-shape-2" title="process-one-shape-2">
+                </div>
+                <div class="row">
+                    <!--Process One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="process-one__single process-one__single--one">
+                            <div class="process-one__icon-box">
+                                <div class="process-one__count-box"></div>
+                                <div class="process-one__icon">
+                                    <span aria-hidden="true" class="  icon-communication"></span>
+                                </div>
+                            </div>
+                            <div class="process-one__content">
+                                <h4 class="process-one__title">*Consultation & Conceptualization</h4>
+                                <p class="process-one__text">Initial meeting to understand client needs, envisioning design concepts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Process One Single End-->
+                    <!--Process One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="process-one__single process-one__single--two">
+                            <div class="process-one__icon-box">
+                                <div class="process-one__count-box"></div>
+                                <div class="process-one__icon">
+                                    <span aria-hidden="true" class="   icon-growth"></span>
+                                </div>
+                            </div>
+                            <div class="process-one__content">
+                                <h4 class="process-one__title process-one__title">Design & Planning</h4>
+                                <p class="process-one__text process-one__text">Crafting detailed plans, considering aesthetics, functionality, and sustainability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Process One Single End-->
+                    <!--Process One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="process-one__single process-one__single--three">
+                            <div class="process-one__icon-box">
+                                <div class="process-one__count-box"></div>
+                                <div class="process-one__icon">
+                                    <span aria-hidden="true" class="   icon-planting"></span>
+                                </div>
+                            </div>
+                            <div class="process-one__content">
+                                <h4 class="process-one__title process-one__title process-one__title">Execution & Construction</h4>
+                                <p class="process-one__text process-one__text process-one__text">- Implementing plans with precision, overseeing construction for flawless execution</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Process One Single End-->
+                    <!--Process One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="process-one__single process-one__single--four">
+                            <div class="process-one__icon-box">
+                                <div class="process-one__count-box"></div>
+                                <div class="process-one__icon">
+                                    <span aria-hidden="true" class="   icon-park"></span>
+                                </div>
+                            </div>
+                            <div class="process-one__content">
+                                <h4 class="process-one__title process-one__title process-one__title process-one__title">
+                                    Completion & Follow-up</h4>
+                                <p class="process-one__text process-one__text process-one__text process-one__text">Project handover, ensuring client satisfaction, and providing post-completion support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Process One Single End-->
+                </div>
+            </div>
+
+            <div class="process-one__bottom">
+                <div class="process-one__bottom-inner">
+                    <div class="process-one__bottom-left">
+                        <p class="">We create an environment that’s beyond your imagination</p>
+                    </div>
+                    <div class="process-one__bottom-right">
+                        <div class="process-one__bottom-btn-box">
+                            <a class="thm-btn process-one__bottom-btn"
+                                href="{{Route('frontend.contact')}}">Contact With Team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Process One End-->
+
+    <!--Testimonial One Start-->
+    <section class="testimonial-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="testimonial-one__left">
+                        <div class="section-title text-left">
+                            <div class="section-title__icon">
+                                <img src="{{ asset('user-assets/images/icon/section-title-icon.png') }}" alt="">
+                            </div>
+                            <span class="section-title__tagline">Our feedbacks</span>
+                            <h2 class="section-title__title">What they’re talking about us</h2>
+                        </div>
+                        <p class="testimonial-one__text-1">How to pursue pleasure rationally encounter consequences
+                            that painful again is there anyone who loves.</p>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="testimonial-one__right">
+                        <div class="testimonial-one__carousel thm-owl__carousel owl-theme owl-carousel"
+                        data-owl-options='{
+                            "items": 3,
+                            "margin": 30,
+                            "smartSpeed": 700,
+                            "loop":true,
+                            "autoplay": false,
+                            "nav":false,
+                            "dots":true,
+                            "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                            "responsive":{
+                                "0":{
+                                    "items":1
+                                },
+                                "768":{
+                                    "items":2
+                                },
+                                "992":{
+                                    "items": 2
+                                }
+                            }
+                        }'>
+                        <!--Testimonial One Single Start-->
+                        @foreach ($testimonials as $tt)
+
+                            <div class="item">
+
+                                <div class="testimonial-one__single">
+                                    <div class="testimonial-one__single-inner">
+                                        <div class="testimonial-one__shape-1"
+                                            style="background-image: url(user-assets/images/shapes/testimonial-one-shape-1.png);">
+                                        </div>
+                                        <div class="testimonial-one__review">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <p class="comments">{{ $tt->custreview }}</p>
+
+                                            </div>
+                                            <div class="testimonial-one__client-info">
+                                                <div class="testimonial-one__client-img-box">
+                                                    <div class="testimonial-one__img">
+                                                        <img src="/testiimages/{{ $tt->custimg }}"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial-one__client-content">
+                                                    <h4 class="testimonial-one__client-name">{{ $tt->custname }}</h4>
+                                                    <p class="testimonial-one__client-sub-title">{{ $tt->custdesignation }}, {{ $tt->custcompany }}</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Testimonial One End-->
+
+   <!--Brand One Start-->
+   <section class="brand-one brand-two">
+    <div class="container">
+        <div class="brand-one__inner">
+            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100,
+            "slidesPerView": 5,
+            "loop": true,
+            "navigation": {
+                "nextEl": "#brand-one__swiper-button-next",
+                "prevEl": "#brand-one__swiper-button-prev"
+            },
+            "autoplay": { "delay": 5000 },
+            "breakpoints": {
+                "0": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "375": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "575": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 3
+                },
+                "767": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 4
+                },
+                "991": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 5
+                },
+                "1199": {
+                    "spaceBetween": 100,
+                    "slidesPerView": 5
+                }
+            }}'>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-1.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-2.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-3.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-4.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-5.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-1.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-2.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-3.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-4.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
+                    <div class="swiper-slide">
+                        <img src="{{ asset('user-assets/images/brand/brand-1-5.png') }}" alt="">
+                    </div><!-- /.swiper-slide -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!--Brand One End-->
 
-
-    <!-- About Section End -->
-    <!-- Offer Section Start -->
-    <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105"
-        data-background="{{ asset('frontend/images/bg/abs-bg3.png') }}" data-overlay-dark="4">
-        <div class="section-title mrb-60 mrb-md-15 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="container">
-                <div class="row align-items-end">
-                    <div class="col-xl-8 col-lg-7 col-md-12">
-                        <div class="title-box-center">
-                            <h5 class="side-line-left text-primary-color mrb-10">Our Projects</h5>
-                            <h2 class="text-white mrb-md-40 mrb-sm-30">
-                                Our Outstanding <br />
-                                <span class="text-primary-color">Latest Proejcts</span> & Works
-                            </h2>
+    <!--Blog Two Start-->
+    <section class="blog-two">
+        <div class="blog-two__bg" style="background-image: url(user-assets/images/backgrounds/blog-two-bg.png);"></div>
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="section-title__icon">
+                    <img src="{{ asset('user-assets/images/icon/section-title-icon.png') }}" alt="">
+                </div>
+                <span class="section-title__tagline">Our News Updates</span>
+                <h2 class="section-title__title">Latest articles &
+                    <br> news from the blogs
+                </h2>
+            </div>
+            <div class="row">
+                <!--Blog Two Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="blog-two__single">
+                        <div class="blog-two__img-box">
+                            <div class="blog-two__img">
+                                <img src="{{ asset('user-assets/images/article_blog_section/article_blog_section_(1).png') }}" alt="">
+                            </div>
+                            <div class="blog-two__date">
+                                <p>30
+                                    <br> Mar
+                                </p>
+                            </div>
+                            <div class="blog-two__content">
+                                <p><span class="fas fa-comments"></span>2 Comments</p>
+                                <h3 class="blog-two__title"><a href="blog-details.html">Best ways to light up your
+                                        garden walkways</a></h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-5 col-md-12 text-lg-end">
-                        <p class="text-white mrb-0 mrb-md-40">Discover Our Outstanding Recent Projects in
-                            Innovative Fit-Out Solutions, Where Vision Meets Reality to Redefine Spaces.</p>
                     </div>
                 </div>
+                <!--Blog Two Single End-->
+                <!--Blog Two Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="blog-two__single">
+                        <div class="blog-two__img-box">
+                            <div class="blog-two__img">
+                                <img src="{{ asset('user-assets/images/article_blog_section/article_blog_section_(2).png') }}" alt="">
+                            </div>
+                            <div class="blog-two__date">
+                                <p>30
+                                    <br> Mar
+                                </p>
+                            </div>
+                            <div class="blog-two__content">
+                                <p><span class="fas fa-comments"></span>2 Comments</p>
+                                <h3 class="blog-two__title"><a href="blog-details.html">Quis ipsum suspendisse
+                                        ultrices gravida.</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Blog Two Single End-->
+                <!--Blog Two Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="blog-two__single">
+                        <div class="blog-two__img-box">
+                            <div class="blog-two__img">
+                                <img src="{{ asset('user-assets/images/article_blog_section/article_blog_section_(3).png') }}" alt="">
+                            </div>
+                            <div class="blog-two__date">
+                                <p>30
+                                    <br> Mar
+                                </p>
+                            </div>
+                            <div class="blog-two__content">
+                                <p><span class="fas fa-comments"></span>2 Comments</p>
+                                <h3 class="blog-two__title"><a href="blog-details.html">Consectetur adipiscing elit,
+                                        sed do eiusmod</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Blog Two Single End-->
             </div>
         </div>
-        <div class="section-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="project-item-style1-wrapper mrr--300">
-                            <div class="owl-carousel projects_5col">
+    </section>
+    <!--Blog Two End-->
 
-                                    @foreach ($projects as $project)
-                                    <div class="project-item-style1">
-                                        <div class="project-item-thumb">
-                                            <img class="img-full"src="{{ url('projectt/preview/' . $project->preview_img) }}"
-                                                alt="" />
-                                            <div class="project-item-details">
-                                                <h6 style="color: #fff" class="text-center">
-                                                    {{ $project->title }}
-                                                </h6>
-                                                {{-- <h4 class="project-item-title">
-                                                    <a style="color: #fff!important"
-                                                        href="{{ $project->hyperlinks }}">{{ $project->title }}
-                                                    </a>
-                                                </h4> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-
-                            </div>
-
-                        </div>
-                     </div>
-
+    <!--CTA Two Start-->
+    <section class="cta-two">
+        <div class="container">
+            <div class="cta-two__inner">
+                <div class="cta-two__inner-content">
+                    <div class="cta-two__img">
+                        <img src="{{ asset('user-assets/images/cta_section/cta_section.png') }}" alt="">
                     </div>
+                    <div class="cta-two__shape-1">
+                        <img src="{{ asset('user-assets/images/shapes/cta-two-shape-1.png') }}" alt="">
+                    </div>
+                    <div class="cta-two__left">
+                        <div class="cta-two__icon">
+                            <span class="icon-farmer"></span>
+                        </div>
+                        <h4 class="cta-two__title">Transform Your Space with Expert <br> Gardening Services.
+                        </h4>
+                    </div>
+                    <div class="cta-two__btn-box">
+                        <a href="{{Route('frontend.contact')}}" class="thm-btn cta-two__btn">Book Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- why Choose Us Section End -->
-    <!-- Testimonials Section Start -->
+    <!--CTA Two End-->
 
-    <section class="bg-silver pdt-105 pdb-110 pdb-lg-70 bg-no-repeat bg-cover bg-pos-ct">
-        <div class="section-content">
-            <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-8">
-                            <div class="title-box-center">
-                                <h5 class="sub-title-line-bottom text-primary-color mrb-10">Testimonials</h5>
-                                <h2 class="title">What Our <span class="text-primary-color">Client's</span> Say
-                                    about us?</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="owl-carousel testmonial_3col testimonial-style1 mrb-lg-40">
-                        @foreach ($testimonials as $tt)
-                        <div style="    background: #def2ff;" class="testimonial-item">
-                            <div class="testimonial-thumb">
-                                <img src="/testiimages/{{ $tt->custimg }}" style="height: 50px!important"
-                                    alt="" />
-                            </div>
-                            <div class="testimonial-content">
-                                <p class="comments"> {{ $tt->custreview }}</p>
-                                <h4 class="client-name">{{ $tt->custname }}</h4>
-                                <h6 class="client-designation">{{ $tt->custdesignation }}, {{ $tt->custcompany }}
-                                </h6>
-                            </div>
-                        </div>
-                    @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
 
 @endsection

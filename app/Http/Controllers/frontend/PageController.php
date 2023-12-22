@@ -11,6 +11,7 @@ use App\Models\Message;
 use App\Models\Testimonial;
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\WebsiteData;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 
@@ -18,11 +19,22 @@ use Illuminate\Support\Facades\Mail;
 class PageController extends Controller
 {
 
+    public function getWebsiteSettings()
+    {
+        $settings = WebsiteData::all();
+        $data = [];
+        foreach ($settings as  $setting) {
+            $data[$setting->slug] =   $setting->value;
+        }
+        return $data;
+    }
+
     public function home()
     {
+        $data = $this->getWebsiteSettings();
         $testimonials = Testimonial::all();
         $projects = Project::all();
-        return view('frontend.home', compact( 'projects','testimonials'));
+        return view('frontend.home', compact( 'projects','data','testimonials'));
     }
     public function about()
     {
@@ -33,8 +45,8 @@ class PageController extends Controller
 
         public function contact()
         {
-
-            return view('frontend.contact');
+            $data = $this->getWebsiteSettings();
+            return view('frontend.contact', compact('data'));
         }
         protected function contact_store(Request $request)
         {

@@ -2,146 +2,128 @@
 <html lang="en">
 
 <head>
-    <title> Portfolio - B | @yield('title') </title>
+    <title> Grassland| @yield('title') </title>
+
     @include('frontend.layouts.header')
+
 </head>
 
-<body>
-    <!-- Preloader Start -->
-    <section>
-        <div id="preloader">
-            <div id="ctn-preloader" class="ctn-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-                    <div class="txt-loading">
-                        <span data-text-preloader="P" class="letters-loading">P</span>
-                        <span data-text-preloader="o" class="letters-loading">o</span>
-                        <span data-text-preloader="r" class="letters-loading">r</span>
-                        <span data-text-preloader="t" class="letters-loading">t</span>
-                        <span data-text-preloader="f" class="letters-loading">f</span>
-                        <span data-text-preloader="o" class="letters-loading">o</span>
-                        <span data-text-preloader="l" class="letters-loading">l</span>
-                        <span data-text-preloader="i" class="letters-loading">i</span>
-                        <span data-text-preloader="o" class="letters-loading">o</span>
-                        <span data-text-preloader="-" class="letters-loading">-</span>
-                        <span data-text-preloader="B" class="letters-loading">B</span>
-                    </div>
-                </div>
-                <div class="loader-section section-left"></div>
-                <div class="loader-section section-right"></div>
-            </div>
-        </div>
-    </section>
-    <!-- Preloader End -->
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
 
 
     @include('frontend.layouts.nav')
 
-    @yield('page')
+    <div class="page-wrapper">
 
-    @include('frontend.layouts.footer')
+        @yield('page')
+
+        @include('frontend.layouts.footer')
+
+    </div><!-- /.page-wrapper -->
 
 
-    <!-- Mobile Nav Sidebar Content Start -->
-    <div class="mobile-nav-wrapper">
-        <div class="mobile-nav-overlay mobile-nav-toggler"></div>
-        <div class="mobile-nav-content">
-            <a href="#" class="mobile-nav-close mobile-nav-toggler">
-                <span></span>
-                <span></span>
-            </a>
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
             <div class="logo-box">
-                <a href="index-2.html" aria-label="logo image">
-                    <img src="{{ asset('frontend/images/logo-light.svg')}}" width="165" height="72" alt="logo" />
-                </a>
+                <a href="{{ route('frontend.home') }}" aria-label="logo image"><img src="{{ asset('user-assets/images/resources/grassland-logo-01.svg') }}" width="100" alt=""></a>
             </div>
-                <div class="mobile-nav-container nav-height">
-                    <ul class="bar-nav mobile-menu-list responsive-home">
-                    <li>
-                        <a href="/">Home</a>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
 
-                    </li>
-                    <li>
-                        <a href="/services">Services</a>
-
-                    </li>
-                    <li>
-                        <a href="/project">Projects</a>
-                    </li>
-                    <li>
-                        <a href="/about">About Us</a>
-
-                    </li>
-                    <li>
-                        <a href="/contact"> Contact US</a>
-
-                    </li>
-
-                </ul>
-            </div>
-
-            <ul class="list-items mobile-sidebar-contact">
-                <li><span class="fa fa-map-marker-alt mrr-10 text-primary-color"></span>121 King Street, Australia</li>
-                <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a
-                        href="mailto:example@gmail.com">example@gmail.com</a></li>
-                <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:123456789">+12 345 666
-                        789</a></li>
-            </ul>
-            <ul class="social-list list-primary-color">
+            <ul class="mobile-nav__contact list-unstyled">
                 <li>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:needhelp@packageName__.com">needhelp@gardon.com</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
-                </li>
-            </ul>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-square"></a>
+                    <a href="#" class="fab fa-pinterest-p"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+
+
         </div>
+        <!-- /.mobile-nav__content -->
     </div>
-    <!-- Mobile Nav Sidebar Content End -->
+    <!-- /.mobile-nav__wrapper -->
 
-    <!-- Header Search Popup Start -->
+
+
     <div class="search-popup">
-        <div class="search-popup-overlay search-toggler"></div>
-        <div class="search-popup-content">
+        <div class="search-popup__overlay search-toggler"></div>
+        <!-- /.search-popup__overlay -->
+        <div class="search-popup__content">
             <form action="#">
-                <label for="search" class="sr-only">search here</label>
-                <input type="text" id="search" placeholder="Search Here..." />
+                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                <input type="text" id="search" placeholder="Search Here...">
                 <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="base-icon-search-1"></i>
+                    <i class="icon-magnifying-glass"></i>
                 </button>
             </form>
         </div>
+        <!-- /.search-popup__content -->
     </div>
-    <!-- Header Search Popup End -->
+    <!-- /.search-popup -->
 
-    <!-- Back to Top Start -->
-    <div class="anim-scroll-to-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- Back to Top end -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-right-arrow"></i></a>
 
 
-    <!-- Integrated important scripts here -->
-    <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.appear.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.event.move.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.twentytwenty.js') }}"></script>
-    <script src="{{ asset('frontend/js/tilt.jquery.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/backtotop.js') }}"></script>
-    <script src="{{ asset('frontend/js/trigger.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jarallax/jarallax.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/nouislider/nouislider.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/odometer/odometer.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/swiper/swiper.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/tiny-slider/tiny-slider.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/wnumb/wNumb.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/wow/wow.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/isotope/isotope.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/countdown/countdown.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/bxslider/jquery.bxslider.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/vegas/vegas.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/jquery-ui/jquery-ui.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/timepicker/timePicker.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/circleType/jquery.circleType.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/circleType/jquery.lettering.min.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/twenty-twenty/twentytwenty.js') }}"></script>
+    <script src="{{ asset('user-assets/vendors/twenty-twenty/jquery.event.move.js') }}"></script>
+
+
+
+
+    <!-- template js -->
+    <script src="{{ asset('user-assets/js/gardon.js') }}"></script>
 
 </body>
 

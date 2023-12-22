@@ -105,7 +105,7 @@
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Featured Image</h4>
                                                     <div class="media flex-column flex-md-row">
-                                                        <img src="{{ url('project/preview/' . $project->preview_img) }}"
+                                                        <img src="{{ url('projectt/preview/' . $project->preview_img) }}"
                                                             id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0"
                                                             width="100" height="100" alt="Blog Featured Image">
                                                         <div class="media-body">
@@ -140,7 +140,7 @@
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Company Logo</h4>
                                                     <div class="media flex-column flex-md-row">
-                                                        <img src="{{ url('project/client/' . $project->company_logo) }}"
+                                                        <img src="{{ url('projectt/client/' . $project->company_logo) }}"
                                                             id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0"
                                                             width="100" height="100" alt="Blog Featured Image">
                                                         <div class="media-body">

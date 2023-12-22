@@ -1,117 +1,243 @@
 @extends('frontend.layouts.app')
-@section('title', 'Services')
+@section('title', 'Home page')
+
 @section('page')
-<section class="page-title-section hero-height">
+
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(user-assets/images/breadcrumb/breadcrumb.png)">
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="breadcrumb-area">
-            <h2 class="page-title">Services</h2>
-            <ul class="breadcrumbs-link">
-              <li><a href="{{'/services'}}">Home</a></li>
-              <li><a href="index.html">Services</a></li>
+        <div class="page-header__inner crumb-pad">
+            <h2>Services</h2>
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="{{Route('frontend.home')}}">Home</a></li>
+                <li><span>></span></li>
+                <li>Services</li>
             </ul>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-85" data-background="{{ asset('frontend/images/bg/abs-bg4.png')}}" data-overlay-dark="4">
-    <div style="" class="section-content">
-      <div class="container">
-        <div class="row fit-sol fit-out">
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-            <h2 class="text-white mrb-30 mrb-sm-30 services-font-size">
-                Transform Ordinary Places with
-                Our Fit Out Expertise!
-            </h2>
-            <p class="text-white mrb-40">At Al Yasmeen, we turn rooms into extraordinary spaces,
-                handling every aspect from planning to completion.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-85" data-background="{{ asset('frontend/images/bg/abs-bg4.png')}}" data-overlay-dark="4">
-    <div class="section-content">
-      <div class="container">
+</section>
+
+<section class="services-page padding-serv">
+    <div class="container">
         <div class="row">
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-            <h2 class="text-white mrb-30 mrb-sm-30">
-                Laboratory Solutions
-            </h2>
-            <p class="text-white mrb-40 services-text">Elevate your laboratory with cutting-edge solutions from Al Yasmeen. We offer a diverse range of products to equip your lab for excellence. Our ventilated devices include laboratory fume hoods, benchtop fume hoods, and specialized options like distillation and radioisotope hoods. Enhance your lab's functionality with our modular laboratory furniture, featuring metal, phenolic, plastic laminated, polypropylene, wood, and stainless steel casework. Safety is paramount, and our Safety Cabinets for Flammable and Combustible Liquid Storage provide the utmost security. Our innovative lab supplies elevate your research environment to new heights.</p>
-
-          </div>
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
-            <div class="shine-effect">
-              <img class="img-full" src="{{ asset('frontend/images/about/divider-img1.jpg')}}" alt="" />
+            <!--Services One Single Start-->
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="services-one__single">
+                    <div class="services-one__img-box">
+                        <div class="services-one__img">
+                            <img src="{{ asset('user-assets/images/service_page/service_page_(1).png')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="services-one__icon">
+                        <span class="icon-gardening"></span>
+                    </div>
+                    <h3 class="services-one__title"><a href="spring-cleaning.html">Landscape Design</a></h3>
+                    <p class="services-one__text">Innovative designs that harmonize <br> nature for stunning outdoor <br> transformations
+                    </p>
+                    <div class="services-one__btn-box">
+                        <a href="{{Route('frontend.services')}}" class="services-one__btn">Read More<span class="icon-right-arrow"></span></a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-85" data-background="{{ asset('frontend/images/bg/abs-bg4.png')}}" data-overlay-dark="4">
-    <div class="section-content">
-      <div class="container">
-        <div class="row data-sol">
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-            <h2 class="text-white mrb-30 mrb-sm-30">
-                Datacenter Solutions
-            </h2>
-            <p class="text-white mrb-40 services-text">Explore our comprehensive datacenter solutions, where we provide customized datacenter solutions perfectly aligned with your unique requirements. Our services encompass construction and classification based on design and tier ratings, ensuring you receive precisely what your operation needs. We offer various types of data centers, including enterprise data centers, managed services data centers, cloud-based data centers, colocation data centers, and Edge/Micro data centers. Furthermore, our classification of data centers is based on tier ratings, ranging from Tier I data centers with basic capacity to Tier IV data centers offering unmatched fault tolerance. Trust us to deliver the optimal data center solution tailored to your specifications, guaranteeing reliability and performance</p>
-
-          </div>
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
-            <div class="shine-effect">
-              <img class="img-full" src="{{ asset('frontend/images/about/divider-img1.jpg')}}" alt="" />
+            <!--Services One Single End-->
+            <!--Services One Single Start-->
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="services-one__single">
+                    <div class="services-one__img-box">
+                        <div class="services-one__img">
+                            <img src="{{ asset('user-assets/images/service_page/service_page_(2).png')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="services-one__icon">
+                        <span class="icon-farming-and-gardening"></span>
+                    </div>
+                    <h3 class="services-one__title"><a href="hard-scaping.html">Architecture Services</a></h3>
+                    <p class="services-one__text"> Visionary designs, precise execution, elevating spaces with architectural excellence
+                    </p>
+                    <div class="services-one__btn-box">
+                        <a href="{{Route('frontend.services')}}" class="services-one__btn">Read More<span class="icon-right-arrow"></span></a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-85" data-background="{{ asset('frontend/images/bg/abs-bg4.png')}}" data-overlay-dark="4">
-    <div class="section-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-            <h2 class="text-white mrb-30 mrb-sm-30">
-                Audio-Video Solutions
-            </h2>
-            <p class="text-white mrb-40 services-text">Experience the pinnacle of audio and video excellence with Al Yasmeen's state-of-the-art solutions. From expert Dolby Atmos setups that transport you into the heart of your entertainment to meticulous home cinema calibration, we craft unforgettable experiences. Our expertise extends to acoustics and soundproofing, ensuring every sound is crystal clear. With home cinema automation, your entertainment is at your fingertips, effortlessly. Our dedicated team specializes in home cinema design and installation, making your dreams a reality. Whether it's TV or projector installation, we've got you covered. Plus, count on us for consistent home cinema maintenance and support, ensuring your entertainment is always top-notch.</p>
-
-          </div>
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
-            <div class="shine-effect">
-              <img class="img-full" src="{{ asset('frontend/images/about/divider-img1.jpg')}}" alt="" />
+            <!--Services One Single End-->
+            <!--Services One Single Start-->
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="services-one__single">
+                    <div class="services-one__img-box">
+                        <div class="services-one__img">
+                            <img src="{{ asset('user-assets/images/service_page/service_page_(3).png')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="services-one__icon">
+                        <span class="icon-gardener-1"></span>
+                    </div>
+                    <h3 class="services-one__title"><a href="garden-care.html">Garden Landscape Services</a></h3>
+                    <p class="services-one__text">Crafting vibrant and sustainable garden landscapes for enchanting outdoor
+                        experiences.
+                    </p>
+                    <div class="services-one__btn-box">
+                        <a href="{{Route('frontend.services')}}" class="services-one__btn">Read More<span class="icon-right-arrow"></span></a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-85" data-background="{{ asset('frontend/images/bg/abs-bg4.png')}}" data-overlay-dark="4">
-    <div style="padding-bottom: 59px;" class="section-content">
-      <div class="container">
-        <div class="row fit-sol">
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-            <h2 class="text-white mrb-30 mrb-sm-30">
-                Fit Out Solution
-            </h2>
-            <p class="text-white mrb-40 services-text">We're dedicated to transforming spaces into extraordinary environments through our comprehensive Fit-Out Solutions. Our services cover everything from project planning to completion, ensuring your vision is realized. We offer planning, cost analysis, interior design, space planning, and construction documentation. Additionally, we excel in design and build projects, including new construction, renovation, and remodeling. Our project management services encompass value engineering, construction management, cost control, and detailed documentation. We serve various sectors, including hotels, healthcare, offices, retail, F&B, education, and the public sector, delivering excellence in every project.</p>
+</section>
 
-          </div>
-          <div class="col-md-12 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="800ms">
-            <div class="shine-effect">
-              <img class="img-full" src="{{ asset('frontend/images/about/divider-img1.jpg')}}" alt="" />
+<section class="service-details">
+    <div class="container">
+        <div class="row services-icon">
+            <div class="col-xl-12 col-lg-7">
+                <div class="services-details__right">
+                    <h3 style="text-align: center;" class="services-details__title-2">Why Choose Grassland</h3>
+                    <h5 style="text-align: center;" class="sub-head"> Experience the Grassland Advantage</h5>
+                    <ul class="services-details__points-list list-unstyled">
+                        <li class="icon-flex">
+                            <div class="services-details__icon-and-title">
+                                <div class="services-details__points-icon service-point">
+                                    <span class="icon-gardening-1"></span>
+                                </div>
+                                <h3 class="services-details__points-title">Creative
+                                    <br> Expertise</h3>
+                            </div>
+                            <p class="services-details__points-text serve-text">Unleash the power of innovative designs crafted by our skilled team.</p>
+                        </li>
+                        <li class="icon-flex">
+                            <div  class="services-details__icon-and-title icon-size">
+                                <div class="services-details__points-icon service-point">
+                                    <span class="icon-seeding"></span>
+                                </div>
+                                <h3 class="services-details__points-title">Comprehensive
+                                    <br> Services</h3>
+                            </div>
+                            <p class="services-details__points-text serve-text">From concept to completion, Grassland ensures a seamless and satisfying
+                            experience</p>
+                        </li>
+                        <li class="icon-flex">
+                            <div  class="services-details__icon-and-title icon-sizes">
+                                <div  class="services-details__points-icon service-point">
+                                    <span class="icon-house"></span>
+                                </div>
+                                <h3 class="services-details__points-title">Quality
+                                    <br> Assurance</h3>
+                            </div>
+                            <p class="services-details__points-text serve-text">Trust in our commitment to precision, sustainability, and client satisfaction.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
+<section class="process-one">
+    <div class="process-one__shape-1"
+        style="background-image: url(https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/process-one-shape-1.png);">
+    </div>
+    <div class="container">
+        <div class="section-title text-center">
+            <div class="section-title__icon">
+                <img decoding="async"
+                    src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/section-title-icon.png"
+                    alt="section-title-icon" title="section-title-icon">
+            </div>
+            <span class="section-title__tagline">our work process </span>
+            <h2 class="section-title__title">See our 4 easy steps how <br> we works</h2>
+        </div>
+        <div class="process-one__top">
+            <div class="process-one__shape-2">
+                <img decoding="async"
+                    src="https://bracketweb.com/gardonwp/wp-content/uploads/2023/06/process-one-shape-2.png"
+                    alt="process-one-shape-2" title="process-one-shape-2">
+            </div>
+            <div class="row">
+                <!--Process One Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="process-one__single process-one__single--one">
+                        <div class="process-one__icon-box">
+                            <div class="process-one__count-box"></div>
+                            <div class="process-one__icon">
+                                <span aria-hidden="true" class="  icon-communication"></span>
+                            </div>
+                        </div>
+                        <div class="process-one__content">
+                            <h4 class="process-one__title">*Consultation & Conceptualization</h4>
+                            <p class="process-one__text">Initial meeting to understand client needs, envisioning design concepts</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Process One Single End-->
+                <!--Process One Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="process-one__single process-one__single--two">
+                        <div class="process-one__icon-box">
+                            <div class="process-one__count-box"></div>
+                            <div class="process-one__icon">
+                                <span aria-hidden="true" class="   icon-growth"></span>
+                            </div>
+                        </div>
+                        <div class="process-one__content">
+                            <h4 class="process-one__title process-one__title">Design & Planning</h4>
+                            <p class="process-one__text process-one__text">Crafting detailed plans, considering aesthetics, functionality, and sustainability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Process One Single End-->
+                <!--Process One Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="process-one__single process-one__single--three">
+                        <div class="process-one__icon-box">
+                            <div class="process-one__count-box"></div>
+                            <div class="process-one__icon">
+                                <span aria-hidden="true" class="   icon-planting"></span>
+                            </div>
+                        </div>
+                        <div class="process-one__content">
+                            <h4 class="process-one__title process-one__title process-one__title">Execution & Construction</h4>
+                            <p class="process-one__text process-one__text process-one__text">- Implementing plans with precision, overseeing construction for flawless execution</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Process One Single End-->
+                <!--Process One Single Start-->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="process-one__single process-one__single--four">
+                        <div class="process-one__icon-box">
+                            <div class="process-one__count-box"></div>
+                            <div class="process-one__icon">
+                                <span aria-hidden="true" class="   icon-park"></span>
+                            </div>
+                        </div>
+                        <div class="process-one__content">
+                            <h4 class="process-one__title process-one__title process-one__title process-one__title">
+                                Completion & Follow-up</h4>
+                            <p class="process-one__text process-one__text process-one__text process-one__text">Project handover, ensuring client satisfaction, and providing post-completion support.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Process One Single End-->
+            </div>
+        </div>
 
-  @endsection
+        <div class="process-one__bottom">
+            <div class="process-one__bottom-inner">
+                <div class="process-one__bottom-left">
+                    <p class="">We create an environment that’s beyond your imagination</p>
+                </div>
+                <div class="process-one__bottom-right">
+                    <div class="process-one__bottom-btn-box">
+                        <a class="thm-btn process-one__bottom-btn"
+                            href="https://bracketweb.com/gardonwp/contact/">Contact With Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Services Page End-->
+
+@endsection

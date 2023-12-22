@@ -1,87 +1,88 @@
-    <!-- Header Area Start -->
-    <header class="header-style-02">
-        <div class="header-topbar">
-            <div class="container">
-                <div class="header-topbar-inner">
-                    <div class="header-topbar-leftpart">
-                        <ul class="topbar-info">
-                            <li>
-                                <i class="base-icon-email1"></i>
-                                <a href="mailto:example@gmail.com">example@gmail.com</a>
-                            </li>
-                            <li>
-                                <i class="base-icon-pin2"></i>
-                                121 King Street, Melbourne, Australia
-                            </li>
-                        </ul>
+<header class="main-header-three">
+    <div class="main-header-three__top">
+        <div class="main-header-three__top-inner">
+            <ul class="list-unstyled main-header-three__contact-list">
+                <li>
+                    <div class="icon">
+                        <i class="fas fa-phone-square"></i>
                     </div>
-                    <div class="header-topbar-rightpart">
-                        <ul class="topbar-social">
-                            <li>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                        <div class="language">
-                            <a class="language-btn" href="#"><i class="base-icon-globe1"></i>
-                                <span>English</span></a>
-                            <ul class="language-dropdown">
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">Spanish</a></li>
-                                <li><a href="#">Arabic</a></li>
-                            </ul>
+                    <div class="text">
+                        <p><a href="tel: {{ $data['sales-number'] }}">{{ $data['sales-number'] }}</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                        <p><a href="{{ $data['sales-email'] }}">{{ $data['sales-email'] }}</a></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="main-header-three__top-close-time-and-social">
+                <ul class="list-unstyled main-header-three__top-close-time-list">
+                    <li>
+                        <div class="icon">
+                            <i class="fas fa-clock"></i>
                         </div>
+                        <div class="text">
+                            <p>Mon - Fri: 9:00 - 19:00/ Closed on weekends</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="main-header-three__top-social">
+                    <a href="{{ $data['linkedin-link'] }}"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{ $data['facebook-link'] }}"><i class="fab fa-facebook"></i></a>
+                    <a href="{{ $data['instagram-link'] }}"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="main-menu main-menu-three">
+        <div class="main-menu-three__wrapper">
+            <div class="main-menu-three__wrapper-inner">
+                <div class="main-menu-three__logo">
+                    <a href="{{ route('frontend.home') }}">
+                        <img src="{{ asset('user-assets/images/resources/grassland-logo-01.svg') }}" alt=""></a>
+                </div>
+                <div class="main-menu-three__main-menu-box">
+                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                    <ul class="main-menu__list">
+                        <li >
+                            <a href="{{ route('frontend.home') }}">Home </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('frontend.services') }}">Services</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('frontend.about') }}">About</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('frontend.contact') }}">Contact</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('frontend.store') }}">Store</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-menu-three__right">
+                    {{-- <div class="main-menu-three__search-cart-box">
+                        <div class="main-menu-three__search-box">
+                            <a href="#" class="main-menu-three__search search-toggler icon-magnifying-glass"></a>
+                        </div>
+                        <div class="main-menu-three__cart-box">
+                            <a href="cart.html" class="main-menu-three__cart icon-shopping-cart"></a>
+                        </div>
+                    </div> --}}
+                    <div class="main-menu-three__btn-box">
+                        <a href="{{ route('frontend.contact') }}" class="thm-btn main-menu-three__btn">Get Free Quote</a>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="main-menu sticky-header">
-            <div class="container">
-                <div class="main-menu-inner">
-                    <div class="main-menu-logo">
-                        <a href="index.html">
-                            <img src="{{ asset('frontend/images/logo-dark.svg') }}" width="165" height="72"
-                                alt="logo" />
-                        </a>
-                    </div>
-                    <ul class="main-nav-menu bar-nav ">
-                        <li class="{{ URL::current() == url('/') ? 'active' : '' }}">
-                            <a href="{{ route('frontend.home') }}">Home</a>
-                        </li>
-                        <li class="{{ URL::current() == url('/services') ? 'active' : '' }}">
-                            <a href="{{ route('frontend.services') }}">Services</a>
-                        </li>
-                        <li class="{{ URL::current() == url('/project') ? 'active' : '' }} ">
-                            <a href="{{ route('frontend.project') }}">Projects</a>
-                        </li>
-                        <li class="{{ URL::current() == url('/about') ? 'active' : '' }} ">
-                            <a href="{{ route('frontend.about') }}">About us</a>
-                        </li>
+    </nav>
+</header>
 
-
-                    </ul>
-                    <div class="main-menu-right">
-                        <a href="#" class="mobile-nav-toggler">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-
-                        <div class="header-contact-btn">
-                            <a href="{{ route('frontend.contact') }}" class="cs-btn-one btn-circle">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Area End -->
+<div class="stricky-header stricked-menu main-menu main-menu-three">
+    <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+</div><!-- /.stricky-header -->

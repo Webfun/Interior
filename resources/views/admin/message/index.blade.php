@@ -69,7 +69,7 @@
                                                 <th>Name</th>
                                                 <th>Phone no</th>
                                                 <th>Message</th>
-                                                <th>Date</th>
+                                                {{-- <th>Date</th> --}}
                                                 <th class="text-center">Delete</th>
                                             </tr>
                                         </thead>
@@ -102,11 +102,11 @@
                                                             </a>
                                                         </td>
 
-                                                        <td class="view-message text-end text-muted">
+                                                        {{-- <td class="view-message text-end text-muted">
                                                             <a href="javascript:void(0);">
                                                                 {{ date_format($fm->created_at, 'd/M/Y') }}
                                                             </a>
-                                                        </td>
+                                                        </td> --}}
                                                         <td colspan="1">
                                                             <a href="{{ route('admin.message.destroy', $fm->id) }}"
                                                                 class="btn btn-danger"

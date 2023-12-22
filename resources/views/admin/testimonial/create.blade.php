@@ -40,7 +40,7 @@
 
 
                 <!-- Basic multiple Column Form section start -->
-                <section id="multiple-column-form">
+                <section style="padding-top: 24px" id="multiple-column-form">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">

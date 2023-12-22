@@ -9,7 +9,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Falcon | Dashboard &amp; Web App Template</title>
+    <title>Portfolio-b - Login Page</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -91,6 +91,7 @@
                                 <div class="mb-3">
                                     <input class="form-control" name="password" type="password" placeholder="Password">
                                 </div>
+
 
                                 <x-input-error :messages="$errors->get('email')"
                                     class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " />
